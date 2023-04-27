@@ -36,12 +36,47 @@
             background-image:url('./image/male.svg');
             background-size:100%;
         }
+
+        .d2{}
+        .d2>ul{
+            list-style:none;
+            padding:0px;
+        }
+        .d2>ul>li{
+            width:120px;height:35px;border:1px solid gray;
+            text-align:center;
+            line-height:35px;
+        }
+        .d2>ul>li>a{
+            display:block;
+            text-decoration: none;
+        }
+        .d2>ul>li>a::before{
+            /* 이모지 : window + . */
+            content:'😊';
+            /* background-image: url('./image/male.svg');
+            width:20px;
+            height:20px;
+            display:inline-block;
+            background-size:100%; */
+        }
+        .d2>ul>li>a::after{
+            content:'🍟';
+        }
     </style>
 </head>
 
 <body>
     
     <div class="d1">HELLOWORLD</div>    
-
+    <hr/>
+    <div class="d2">
+       <ul>
+        <li><a href="">MENU1</a></li>
+        <li><a href="">MENU2</a></li>
+        <li><a href="">MENU3</a></li>
+        <li><a href="">MENU4</a></li>
+       </ul>
+    </div>
 </body>
 </html>
