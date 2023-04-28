@@ -7,6 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <!-- 한글자 타이핑 라이브러리 -->
+    <!-- 의존 라이브러리와 별개로 로드 -->
+    <script src="https://unpkg.com/hangul-js"></script>
+    <script src="https://unpkg.com/type-hangul@latest/dist/type-hangul.min.js"></script>
+    <!-- 의존 라이브러리 번들한 파일 로드 -->
+    <script src="https://unpkg.com/type-hangul"></script>
 
     <style>
         * {
@@ -88,7 +94,7 @@
             display: none;
             background-color: rgb(58, 93, 195);
             border-radius: 5px;
-            z-index:10;
+            z-index: 10;
 
         }
 
@@ -235,59 +241,17 @@
 
         }
 
-        .banner {
-            font-size: 6rem;
-            font-weight: bold;
-            white-space: nowrap;
-            overflow: hidden;
-            height:500px;
-            line-height:500px;
-            width:100%;
-            position:absolute;
-            left:30%;
-            z-index:-5;
-           ;
-        }
-
-        .banner span {
-            display: inline-block;
-            color:black;
-            opacity: 0;
-            animation: typing 0.5s  ease-in-out forwards;
-        }
-
-        .banner span:nth-child(1) {animation-delay: 0s;}
-        .banner span:nth-child(2) {animation-delay: 0.5s;}
-        .banner span:nth-child(3) {animation-delay: 1s;}
-        .banner span:nth-child(4) {animation-delay: 1.5s;}
-        .banner span:nth-child(5) {animation-delay: 2s;}
-        .banner span:nth-child(6) {animation-delay: 2.5s;}
-        .banner span:nth-child(7) {animation-delay: 3s;}
-
-
-        /* 나머지 글자에 대해서도 같은 방식으로 적용 가능 */
-        @keyframes typing {
-            from {
-                opacity: 0;
-                transform: translateX(-50%);
-                /* width:0; */
-                
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-                /* width:auto; */
-            }
-        }
-
-
         @keyframes rotate_image {
             100% {
                 transform: rotate(360deg);
             }
         }
 
-      
+        .banner{
+            height:500px;
+            font-size:4rem;
+            background-color:orange;
+        }
     </style>
 
 </head>
@@ -346,20 +310,15 @@
         </div>
     </header>
     <section class="main-banner">
-        <div class="banner">
-            <span>A</span>
-            <span>B</span>
-            <span>C</span>
-            <span>D</span>
-            <span>E</span>
-            <span>F</span>
-            <span>G</span>
-        </div>
+
         <img class="img" src="./image/stick.svg" alt="" />
         <img class="img2" src="./image/stick.svg" alt="" />
         <img class="img3" src="./image/stick.svg" alt="" />
     </section>
 
+
+
 </body>
+
 
 </html>
