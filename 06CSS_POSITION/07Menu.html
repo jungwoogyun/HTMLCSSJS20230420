@@ -5,22 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+
     <style>
+        *{
+            font-weight: 600;
+        }
         body{margin:0px;}
         ul{
             list-style:none;
             padding:0px;
         }
+        a{
+            text-decoration: none;
+            color:black;
+        }
         header{
             height:90px;
             /* line-height:90px; */
-            border:1px solid gray;
+            /* border:1px solid gray; */
+            border-bottom:1px solid lightgray;
             display:flex;
+            justify-content: space-between;
             position:relative;
+            padding:0 120px;
         }
         header>.header--logo{
             width:90px;
-            height:55px;
+            /* height:55px; */
+            display:flex;
+            align-items: center;
         }
         header>.header--logo>img{
           
@@ -28,40 +42,63 @@
         }
         
         /* 헤더 GNB */
-        header>.gnb{}
+        header>.gnb{
+            /* border:1px solid red; */
+            width:1200px;
+        }
         header>.gnb>.one--depth{
-            width:1000px;
+            width:100%;
             display:flex;
             justify-content: right;
+            margin:0px;
         }
         header>.gnb>.one--depth>li{
             width:120px;
             height:90px;
-            border:1px solid gray;
+            /* border:1px solid gray; */
             text-align: center;
 
             position:relative;
         }
         header>.gnb>.one--depth>li>a{
             display:block;
+            line-height:90px;
+            font-size:1.2rem;
         }
         header>.gnb>.one--depth>li>.two--depth{
-            border:1px solid gray;
+            /* border:1px solid gray; */
             position:absolute;
             top:90px;
             left:0px;
             width:100%;
-            display:block;
+            display:none;
+            background-color:royalblue;
+            border-radius:15px;
+            
+           
         }
         header>.gnb>.one--depth>li>.two--depth>li{
-            height:35px;
+            height:50px;
+           
         }
-        header>.gnb>.one--depth>li>.two--depth>li>a{}
+        header>.gnb>.one--depth>li>.two--depth>li>a{
+            font-weight:400;
+            color:white;
+        }
 
         header>.gnb>.one--depth>li:hover .two--depth{
             display:block;
+            transition: 0.4s;
         }
 
+        header>.gnb>.one--depth>li>.two--depth::before{
+            content:'🍟';
+            position:relative;
+            top:-28px;
+            left:0px; 
+        
+
+        }
         /* 헤더 GNB-LINK */
         header>.gnb--link{}
     </style>
