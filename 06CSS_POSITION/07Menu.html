@@ -9,9 +9,14 @@
 
     <style>
         *{
-            font-weight: 600;
+            font-weight: 400;
+            /* font-family: outfit; */
+            color : white;
         }
-        body{margin:0px;}
+        body{
+            margin:0px;
+
+        }
         ul{
             list-style:none;
             padding:0px;
@@ -26,7 +31,7 @@
             /* border:1px solid gray; */
             border-bottom:1px solid lightgray;
             display:flex;
-            justify-content: space-between;
+            justify-content: space-evenly;
             position:relative;
             padding:0 120px;
         }
@@ -53,12 +58,13 @@
             margin:0px;
         }
         header>.gnb>.one--depth>li{
-            width:120px;
+            width:150px;
             height:90px;
             /* border:1px solid gray; */
             text-align: center;
 
             position:relative;
+          
         }
         header>.gnb>.one--depth>li>a{
             display:block;
@@ -72,9 +78,9 @@
             left:0px;
             width:100%;
             display:none;
-            background-color:royalblue;
-            border-radius:15px;
-            
+            background-color:rgb(58, 93, 195);
+            border-radius:5px;
+          
            
         }
         header>.gnb>.one--depth>li>.two--depth>li{
@@ -85,22 +91,82 @@
             font-weight:400;
             color:white;
         }
-
+        header>.gnb>.one--depth>li>a:hover {
+            color :rgb(58, 93, 195);
+        }
         header>.gnb>.one--depth>li:hover .two--depth{
             display:block;
-            transition: 0.4s;
+            animation-name:movingMenu;
+            animation-duration: 0.2s;
+            animation-timing-function: linear;
         }
 
         header>.gnb>.one--depth>li>.two--depth::before{
-            content:'🍟';
+            content:'';
+            background-image: url('./image/share.svg');
+            background-size: 100%;
+            background-repeat: no-repeat;
+            width:25px;
+            height:25px;
+            /* border : 1px solid gray; */
+            display:block;
             position:relative;
             top:-28px;
-            left:0px; 
+            left:0px;
+            margin : 0 auto; 
+            
+           
         
 
         }
+
+        @keyframes movingMenu {
+            from{margin-top:20%;opacity: 0.5;}
+            to{margin-top:0%;opacity: 1;}
+        }
+
+
         /* 헤더 GNB-LINK */
-        header>.gnb--link{}
+        header>.gnb--link{
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            position:relative;
+        }
+        header>.gnb--link>a{
+            /* line-height:90px; */
+            height:30px;
+            width:50px;
+            display:block;
+            text-align:center;
+            line-height:30px;
+            /* border:1px solid gray; */
+            position:relative;
+            top:0;bottom:0;
+            margin:auto;
+            border : 1px solid lightgray;
+        }
+        header>.gnb--link>a:nth-child(2){
+            background-color :black;
+            color : white;
+            margin-right:10px;
+        }
+        header>.gnb--link>*{
+            margin-right:10px;
+        }
+        header>.gnb--link>button{
+
+            background-color: white;
+            font-size:0.5rem;
+            border:0;
+            outline: 0;
+        }
+        header>.gnb--link>button>img{
+            width:30px;
+            height:30px;
+        }
+
+
     </style>
 </head>
 <body>
@@ -150,7 +216,11 @@
                 </li>
             </ul>
         </nav>
-        <div class="gnb--link">GNB-link</div>
+        <div class="gnb--link">
+            <a href="">KOR</a>    
+            <a href="">ENG</a>
+            <button><img src="./image/sitemenu.svg"></button>
+        </div>
     </header>
 </body>
 </html>
