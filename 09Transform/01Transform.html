@@ -6,15 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        div{
+        .parent{
+            width:1000px;
+            height:1000px;
+            border:1px solid gray;
+        }
+        .item{
             width:150px;
             height:150px;
             border:1px solid;
-            margin:150px;
+           
             background-color: orange;
             transition: 1s;
         }
-        div:hover{
+        .parent:hover .item{
             /* translate 위치이동 */
             /* transform:translate(200px,200px); */
             /* transform:translateX(200px); */
@@ -30,13 +35,15 @@
             /* transform:skew(45deg,45deg); */
 
             /* 한번에 적용 */
-            transform:translate(100px,100px) rotate(45deg) scale(1.5,1.5) skew(25deg,25deg);
+            transform:translate(500px,500px) rotate(360deg) scale(1.5,1.5) skew(25deg,25deg);
         }
     </style>
 </head>
 <body>
 
-    <div></div>
+    <div class="parent">
+        <div class="item"></div>
+    </div>
     
 </body>
 </html>
